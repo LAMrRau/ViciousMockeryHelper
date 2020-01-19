@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: da-client-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: da-client
+  template:
+    metadata:
+      labels:
+        app: da-client
+    spec:
+      containers:
+      - name: da-client
+        image: de.icr.io/deploy-angular/client:3
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
