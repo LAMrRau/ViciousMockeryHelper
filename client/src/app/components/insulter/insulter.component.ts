@@ -28,8 +28,8 @@ export class InsulterComponent implements OnInit {
   }
 
   private makeGoInsult(): string {
-    let intOne: number = this.randomIntFromInterval(0, goInsultsData.col1.length);
-    let intTwo: number = this.randomIntFromInterval(0, goInsultsData.col2.length);
+    let intOne: number = this.randomIntFromInterval(0, goInsultsData.col1.length - 1);
+    let intTwo: number = this.randomIntFromInterval(0, goInsultsData.col2.length - 1);
     let wordOne: string = goInsultsData.col1[intOne];
     let wordTwo: string = goInsultsData.col2[intTwo];
 
@@ -37,8 +37,8 @@ export class InsulterComponent implements OnInit {
   }
 
   private makeSonOfInsult(): string {
-    let intOne: number = this.randomIntFromInterval(0, sonOfInsultsData.col1.length);
-    let intTwo: number = this.randomIntFromInterval(0, sonOfInsultsData.col2.length);
+    let intOne: number = this.randomIntFromInterval(0, sonOfInsultsData.col1.length - 1);
+    let intTwo: number = this.randomIntFromInterval(0, sonOfInsultsData.col2.length - 1);
     let wordOne: string = sonOfInsultsData.col1[intOne];
     let wordTwo: string = sonOfInsultsData.col2[intTwo];
 
@@ -46,9 +46,9 @@ export class InsulterComponent implements OnInit {
   }
 
   private makeShakespeareInsult(): string {
-    let intOne: number = this.randomIntFromInterval(0, shakespeareInsultsData.col1.length);
-    let intTwo: number = this.randomIntFromInterval(0, shakespeareInsultsData.col2.length);
-    let intThree: number = this.randomIntFromInterval(0, shakespeareInsultsData.col3.length);
+    let intOne: number = this.randomIntFromInterval(0, shakespeareInsultsData.col1.length - 1);
+    let intTwo: number = this.randomIntFromInterval(0, shakespeareInsultsData.col2.length - 1);
+    let intThree: number = this.randomIntFromInterval(0, shakespeareInsultsData.col3.length - 1);
     let wordOne: string = shakespeareInsultsData.col1[intOne];
     let wordTwo: string = shakespeareInsultsData.col2[intTwo];
     let wordThree: string = shakespeareInsultsData.col3[intThree];
