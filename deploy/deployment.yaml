@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: da-client-deployment
+  name: vmh-client
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: da-client
+      app: vmh-client
   template:
     metadata:
       labels:
-        app: da-client
+        app: vmh-client
     spec:
       containers:
-      - name: da-client
-        image: de.icr.io/deploy-angular/client:3
-        imagePullPolicy: Always
+      - name: vmh-client
+        image: viciousmockeryhelper_client:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 80

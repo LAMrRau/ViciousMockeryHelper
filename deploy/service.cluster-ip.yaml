@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app-sevice: vmh-client-clusterip
+  name: vmh-client-clusterip
+spec:
+  type: ClusterIP
+  selector:
+    app: vmh-client
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP

@@ -3,7 +3,7 @@ client:
     build: client
     tty: true
     ports:
-      - "4200:4200"
+      - "4200:80"
     environment:
       - NODE_ENV=docker
       - PORT=4200
@@ -13,4 +13,3 @@ client:
       - ./client/tsconfig.json:/usr/src/app/tsconfig.json
       - ./client/package.json:/usr/src/app/package.json
       - ./client/package-lock.json:/usr/src/app/package-lock.json
-    # command: sh -c "sleep 10 && ng serve --host 0.0.0.0"
