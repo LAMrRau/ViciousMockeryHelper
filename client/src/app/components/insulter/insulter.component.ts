@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {shakespeareInsultsData} from '../../../content/sharespeareInsultsData';
 import {sonOfInsultsData} from '../../../content/sonOfInsultsData';
 import {goInsultsData} from '../../../content/goInsultsData';
+import {hundredRandomInsults} from '../../../content/100.bard.insults';
 
 @Component({
   selector: 'insulter',
@@ -13,6 +14,7 @@ export class InsulterComponent implements OnInit {
   public currentGoInsult: string = "preset";
   public currentSonOfInsult: string = "preset";
   public currentShakespeareInsult: string = "preset";
+  public randomInsult: string = "preset";
 
   constructor() { }
 
@@ -24,7 +26,13 @@ export class InsulterComponent implements OnInit {
     this.currentGoInsult = this.makeGoInsult();
     this.currentShakespeareInsult = this.makeShakespeareInsult();
     this.currentSonOfInsult = this.makeSonOfInsult();
-    console.log('This happened!');
+    this.randomInsult = this.getRandomInsult();
+  }
+
+  private getRandomInsult(): string {
+    const index: number = this.randomIntFromInterval(0, hundredRandomInsults.length - 1);
+
+    return hundredRandomInsults[index];
   }
 
   private makeGoInsult(): string {
