@@ -1,22 +1,45 @@
-<button (click)="getNewInsults()">
-    More Insults
-</button>
+<div class="float-right p-2">
+    <button (click)="getNewInsults()">
+        <span class="material-icons">autorenew</span>
+    </button>
+</div>
 
-<table>
-<tr>
-    <td>Shakespeare Insult:</td>
-    <td>{{currentShakespeareInsult}}</td>
-</tr>
-<tr>
-    <td>Son Of Insult:</td>
-    <td>{{currentSonOfInsult}}</td>
-</tr>
-<tr>
-    <td>Go Insult:</td>
-    <td>{{currentGoInsult}}</td>
-</tr>
-<tr>
-    <td>Random Insult:</td>
-    <td>{{randomInsult}}</td>
-</tr>
-</table>
+<div class="d-flex flex-row h-25 w-100">
+    <div class="col-6 p-2 h-100">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Shakespeare Insult</h5>
+                <p class="card-text">{{currentShakespeareInsult}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6 p-2 h-100">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Son Of Insult</h5>
+                <p class="card-text">{{currentSonOfInsult}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex flex-row h-25 w-100">
+    <div class="col-6 p-2 h-100">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Go Insult</h5>
+                <p class="card-text">{{currentGoInsult}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6 p-2 h-100">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Random Insult</h5>
+                <p class="card-text">{{randomInsult}}</p>
+            </div>
+        </div>
+    </div>
+</div>
